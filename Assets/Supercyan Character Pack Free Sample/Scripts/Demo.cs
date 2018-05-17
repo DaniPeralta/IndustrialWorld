@@ -14,23 +14,23 @@ public class Demo : MonoBehaviour {
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Q))
+        /*if (Input.GetKeyDown(KeyCode.Q))
         {
             m_cameraLogic.PreviousTarget();
         }
         if (Input.GetKeyDown(KeyCode.E))
         {
             m_cameraLogic.NextTarget();
-        }
+        }*/
     }
 
-    private void OnGUI()
+    /*private void OnGUI()
     {
         GUILayout.BeginVertical(GUILayout.Width(Screen.width));
 
         GUILayout.BeginHorizontal();
 
-   /*     if (GUILayout.Button("Previous character (Q)"))
+        if (GUILayout.Button("Previous character (Q)"))
         {
             m_cameraLogic.PreviousTarget();
         }
@@ -38,7 +38,7 @@ public class Demo : MonoBehaviour {
         if (GUILayout.Button("Next character (E)"))
         {
             m_cameraLogic.NextTarget();
-        }*/
+        }
 
         GUILayout.EndHorizontal();
 
@@ -86,5 +86,5 @@ public class Demo : MonoBehaviour {
         GUI.color = oldColor;
 
         GUILayout.EndVertical();
-    }
+    }*/
 }

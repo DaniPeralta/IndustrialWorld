@@ -31,12 +31,15 @@ public class GameController : MonoBehaviour {
 		actionsButtons.Add ("S3", false);
 		actionsButtons.Add ("S4", false);
 	}
-	
+
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 		
 		if(actions["MateNotified"] == true)
 		{
+			//StartCoroutine ("hi");
+			//yield return new WaitForSeconds (2);
+			//System.Threading.Thread.Sleep(5000);
 			endGame.SetActive (true);
 		}
 
@@ -51,4 +54,6 @@ public class GameController : MonoBehaviour {
 			Debug.Log ("Juego terminado");
 		}
 	}
+
+
 }

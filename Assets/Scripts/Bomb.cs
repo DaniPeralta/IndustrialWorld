@@ -108,20 +108,21 @@ public class Bomb : MonoBehaviour {
 			}
 			else
 			{
-				if(action == "MateNotified")
+				GameController.fail++;
+			}
+		}
+		else
+		{
+			if(action == "MateNotified")
+			{
+				GameController.hits++;
+				if (GameController.actions ["V2"] == true && GameController.actions[action] == false) 
 				{
-					if (GameController.actions ["V2"] == true) 
-					{
-						m_animator.SetTrigger ("Wave");
-						GameController.actions [action] = true;
-					} 
-					else
-						GameController.fail++;
-				}
-				else 
-				{
+					m_animator.SetTrigger ("Wave");
+					GameController.actions [action] = true;
+				} 
+				else
 					GameController.fail++;
-				}
 			}
 		}
 
